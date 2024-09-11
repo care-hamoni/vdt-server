@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ['http://localhost:5174', 'http://localhost:5173'], // Add your allowed origin here
+    origin: ['http://localhost:5174', 'http://localhost:5173', 'https://test.carehamoni.com'], // Add your allowed origin here
     methods: ['GET', 'POST'],        // Specify which HTTP methods are allowed
     allowedHeaders: ['Content-Type'], // Specify which headers are allowed
     credentials: true                // Allow cookies to be sent with requests
@@ -18,7 +18,7 @@ const io = socketIo(server, {
 
 // Enable CORS for HTTP requests
 app.use(cors({
-  origin: ['http://localhost:5174', 'http://localhost:5173'], // Add your allowed origin here
+  origin: ['http://localhost:5174', 'http://localhost:5173', 'https://test.carehamoni.com'], // Add your allowed origin here
   methods: ['GET', 'POST'],        // Specify which HTTP methods are allowed
   allowedHeaders: ['Content-Type'], // Specify which headers are allowed
   credentials: true                // Allow cookies to be sent with requests
